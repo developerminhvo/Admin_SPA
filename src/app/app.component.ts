@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NbIconLibraries } from '@nebular/theme';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   providers: [],
 })
 export class AppComponent {
-  title = 'Admin-SPA';
+  constructor(
+    protected readonly iconLibraries: NbIconLibraries
+  ) {
+    this.iconLibraries.setDefaultPack('eva');
+    this.iconLibraries.registerFontPack('font-awesome', { iconClassPrefix: 'fa', packClass: 'fa' });
+    // this.iconLibraries.registerFontPack('far', { packClass: 'far', iconClassPrefix: 'fa' });
+    this.iconLibraries.registerFontPack('ion', { iconClassPrefix: 'ion' });
+  }
 }
