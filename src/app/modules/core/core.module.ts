@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { NavComponent, ContentComponent } from './components';
 import { CoreRoutes } from './core.routing';
 import { LayoutComponent } from './pages';
+
+const COMPONENTS = [
+  NavComponent,
+  ContentComponent
+];
 const PAGES = [
   LayoutComponent
 ];
@@ -12,7 +18,8 @@ const PAGES = [
     CoreRoutes
   ],
   declarations: [
-    ...PAGES
+    ...PAGES,
+    ...COMPONENTS
   ]
 })
 export class CoreModule { }

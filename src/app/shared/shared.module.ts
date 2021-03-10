@@ -24,7 +24,7 @@ export class SharedModule {
   static forRoot(name: string = 'default'): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
-      providers: [
+      providers: [        
         ...NebularModule.forRoot().providers,
         ...NgxModule.forRoot().providers,
       ]
@@ -35,7 +35,7 @@ export class SharedModule {
       ngModule: SharedModule,
       providers: [
         ...NebularModule.forChild().providers,
-        ...NgxModule.forChild().providers,
+        ...NgxModule.forChild().providers,        
       ]
     };
   }

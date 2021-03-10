@@ -1,6 +1,12 @@
 <nb-layout>
-    <nb-layout-column style="padding: 0">
-        <!-- <router-outlet></router-outlet> -->
-
-    </nb-layout-column>
+  <nb-layout-column style="padding: 0">
+    <app-nav></app-nav>
+    <header>
+      <img src="assets/logo-white.png" alt="logo" class="logo">
+    </header>
+    <app-content>
+      <router-outlet></router-outlet>
+      <!-- <button nz-button nzType="primary">Primary Button</button> -->
+    </app-content>
+  </nb-layout-column>
 </nb-layout>

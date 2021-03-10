@@ -42,14 +42,14 @@ export class LoginComponent implements OnInit {
         .pipe(
           tap(() => { }),
           catchError((err) => {
-            swal.fire('Something Wrong', 'Username or Paassword is wrong', 'error');
+            swal.fire('Lỗi', 'Sai tên đăng nhập hoặc mật khẩu', 'error');
             return of(undefined);
           })
         ).subscribe();
     } else {
       this.loginForm.get('username').markAsTouched();
-      this.loginForm.get('password').markAsTouched();
-      swal.fire('Something Required', 'Username or Paassword can not be blank', 'error');
+      this.loginForm.get('password').markAsTouched();      
+      swal.fire('Thông tin bắt buộc', 'Vui lòng nhập đầy đủ thông tin để truy cập vào hệ thống', 'error');
     }
   }
 }

@@ -29,7 +29,7 @@ export const NGX_MODULES = [
   ClickOutsideModule,
   ImageCropperModule,
   AngularEditorModule,
-  BarRatingModule
+  BarRatingModule,  
 ];
 @NgModule({
   exports: [...NGX_MODULES]

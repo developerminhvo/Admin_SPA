@@ -1,0 +1,180 @@
+<div class="university-detail">
+  <!-- <div class="page-header">
+    <div class="row align-items-md-center">
+      <div class="col-md-6 mb-3">
+        <div class="row">
+          <div class="col-md-5">
+            <nb-form-field>
+              <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+              <input type="text" placeholder="" fullWidth nbInput />
+            </nb-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-md-right m-v-10">
+          <button nbButton status="primary">
+            <nb-icon icon="plus-outline"></nb-icon>Thêm Trường
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>   -->
+  <div class="container-fluid">
+    <div nz-row>
+      <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24" [nzLg]="24" [nzXl]="24" [nzXXl]="24" class="mb-2">
+        <nb-card style="margin: auto; width: 99%; position: relative">
+          <nb-card-body style="width: 100%">
+            <div style="width: 100%">
+              <div class="row align-items-center ng-star-inserted">
+                <div class="col-md-7">
+                  <div class="d-md-flex align-items-center">
+                    <nz-avatar
+                          nzShape="square"
+                          nzSrc="assets/logo-white.png"
+                          nz-size="150"
+                        >                          
+                        </nz-avatar>
+                        <div class="text-center text-sm-left m-v-15 p-l-30">
+                          <h5>Trường Đại học Khoa học Tự nhiên - ĐHQG TPHCM</h5>
+                        </div>
+                  </div>                  
+                </div>
+                <div class="col-md-5">
+                  <div class="row">
+                    <div class="d-md-block border-left col-1"></div>
+                    <div class="col">
+                      <ul class="list-unstyled m-t-10">
+                        <li class="row">
+                          <p class="col-sm-3 col-4 font-weight-semibold text-dark m-b-5">
+                            <nb-icon status="info" icon="email-outline"></nb-icon>
+                            <span class="label">Email: </span>
+                          </p>
+                          <p class="col"></p>
+                        </li>
+                        <li class="row">
+                          <p class="col-sm-3 col-4 font-weight-semibold text-dark m-b-5">
+                            <nb-icon status="info" icon="phone-outline"></nb-icon>
+                            <span class="label">Điện Thoại: </span>
+                          </p>
+                          <p class="col"></p>
+                        </li>
+                        <li class="row">
+                          <p class="col-sm-3 col-4 font-weight-semibold text-dark m-b-5">
+                            <nb-icon status="info" icon="home-outline"></nb-icon>
+                            <span class="label">Địa Chỉ: </span>
+                          </p>
+                          <p class="col"></p>
+                        </li>
+                      </ul>
+                      <div class="d-flex">
+                        <a href="" class="text-gray p-r-20">
+                          <nb-icon icon="facebook-outline"></nb-icon>
+                        </a>
+                        <a href="" class="text-gray p-r-20">
+                          <nb-icon icon="globe-outline"></nb-icon>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>      
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div nz-row>
+      <div
+        nz-col
+        [nzXs]="24"
+        [nzSm]="24"
+        [nzMd]="19"
+        [nzLg]="19"
+        [nzXl]="19"
+        [nzXXl]="19"
+        class="mb-2"
+      >
+        <nb-card style="margin: auto; width: 99%; position: relative">
+          <nb-card-body style="width: 100%">
+            <div style="width: 100%; min-height: 42rem">
+              <nz-table  nzBordered               
+              >
+                <thead>
+                  <tr>
+                    <th rowspan="3">STT</th>
+                    <th rowspan="3">Ngành</th>
+                    <th rowspan="3">Code</th>     
+                    <th colspan="3">Khối</th>               
+                    <th rowspan="3">Chỉ Tiêu</th>                    
+                  </tr>
+                  <tr>
+                    <th rowspan="2">Tên</th>
+                    <th colspan="2">Năm</th>
+                  </tr>
+                  <tr>
+                    <th>2019</th>
+                    <th>2020</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Quản trị kinh doanh</td>
+                    <td>Code</td>
+                    <td>A1</td>
+                    <td>25.5</td>
+                    <td>26.5</td>
+                    <td>100</td>
+                  </tr>                                                     
+                </tbody>
+              </nz-table>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+      <div
+        nz-col
+        [nzXs]="24"
+        [nzSm]="24"
+        [nzMd]="5"
+        [nzLg]="5"
+        [nzXl]="5"
+        [nzXXl]="5"
+        class="mb-2"
+      >
+        <nb-card style="margin: auto; width: 99%; position: relative">
+          <nb-card-body style="width: 100%">
+            <div style="width: 100%; min-height: 42rem">
+              <div class="row">
+                <div class="col-md-12">
+                  <nb-form-field>
+                    <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+                    <input type="text" placeholder="" fullWidth nbInput />
+                  </nb-form-field>
+                </div>
+
+                <div class="col-md-6 mt-5">
+                  <button (click)="openCreateMajorModal()" nbButton status="primary">
+                    <nb-icon icon="plus-outline"></nb-icon>Thêm Ngành
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<!-- <nb-card style="margin: auto; width: 99%; position: relative">
+  <nb-card-body style="width: 100%">
+    <div style="width: 100%">
+      
+    </div>
+  </nb-card-body>
+</nb-card> -->
