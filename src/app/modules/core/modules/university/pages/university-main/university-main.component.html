@@ -45,11 +45,12 @@
                 [nzPageSize]="pageSize"
                 [nzPageIndex]="pageIndex"
                 nzBordered
+                (nzQueryParams)="onQueryParamsChange($event)"
               >
                 <thead>
                   <tr>
                     <th>Tên Trường</th>
-                    <th>Code</th>
+                    <th nzColumnKey="code" [nzSortFn]="true">Code</th>
                     <th>Địa Chỉ</th> 
                     <th>Học Phí</th>                   
                     <th>Thông Tin Liên Hệ</th>

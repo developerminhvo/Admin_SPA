@@ -64,7 +64,6 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
-
 const ANT_MODULES = [
   NzButtonModule,
   NzAffixModule,
@@ -132,6 +131,7 @@ const ANT_MODULES = [
   NzStatisticModule,
   NzStepsModule,
   NzSwitchModule,
+  
 ];
 
 @NgModule({

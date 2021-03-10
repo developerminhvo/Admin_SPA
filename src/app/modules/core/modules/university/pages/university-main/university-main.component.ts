@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzModalService } from 'ng-zorro-antd/modal';
+import { NzTableQueryParams } from 'ng-zorro-antd/table';
 
 
 import { UniversityRM } from 'src/app/view-models';
@@ -91,8 +92,17 @@ export class UniversityMainComponent implements OnInit {
       nzContent: CreateUniversityModalComponent,
       nzClosable: false,
       nzFooter: null,
-      nzWidth: 700
+      nzWidth: 700      
     });
+  }
+
+  onQueryParamsChange(params: NzTableQueryParams): void {
+    console.log(params);
+    const { pageSize, pageIndex, sort, filter } = params;
+    const currentSort = sort.find(item => item.value !== null);
+    const sortField = (currentSort && currentSort.key) || null;
+    const sortOrder = (currentSort && currentSort.value) || null;
+    
   }
 
 }

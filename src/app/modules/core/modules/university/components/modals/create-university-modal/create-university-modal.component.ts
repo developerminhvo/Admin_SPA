@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzModalRef } from 'ng-zorro-antd/modal';
+import { NzUploadFile } from 'ng-zorro-antd/upload';
 import { of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { quillConfiguration } from 'src/app/config';
 import { UniversityService } from 'src/app/services';
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-create-university-modal',
@@ -14,7 +17,7 @@ import Swal from 'sweetalert2';
 export class CreateUniversityModalComponent implements OnInit {
 
   createUniversityForm: FormGroup;
-
+  editorOptions = quillConfiguration;
 
   constructor(
     private _fb: FormBuilder,
@@ -46,7 +49,7 @@ export class CreateUniversityModalComponent implements OnInit {
     this._modalRef.close();
   }
 
-  submitForm(): void {
+  submitForm(): void {    
     if(this.createUniversityForm.valid){      
       this._uniService.createUniversity({} as any).pipe(
         catchError((err) => {
@@ -56,30 +59,23 @@ export class CreateUniversityModalComponent implements OnInit {
       ).subscribe();
       this.closeModal();
     } 
-    
-  }
+  }  
 
-  config = {
-    uiColor: '#ffffff',
-    toolbarGroups: [{ name: 'clipboard', groups: ['clipboard', 'undo'] },
-    { name: 'editing', groups: ['find', 'selection', 'spellchecker'] },
-    { name: 'links' }, { name: 'insert' },
-    { name: 'document', groups: ['mode', 'document', 'doctools'] },
-    { name: 'basicstyles', groups: ['basicstyles', 'cleanup'] },
-    { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align'] },
-    { name: 'styles' },
-    { name: 'colors' }],
-    skin: 'kama',
-    resize_enabled: false,
-    removePlugins: 'elementspath,save,magicline',
-    extraPlugins: 'divarea,smiley,justify,indentblock,colordialog',
-    colorButton_foreStyle: {
-       element: 'font',
-       attributes: { 'color': '#(color)' }
+  defaultFileList: NzUploadFile[] = [
+    {
+      uid: '-1',
+      name: 'xxx.png',
+      status: 'done',
+      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+      thumbUrl: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
     },
-    height: 188,
-    removeDialogTabs: 'image:advanced;link:advanced',
-    removeButtons: 'Subscript,Superscript,Anchor,Source,Table',
-    format_tags: 'p;h1;h2;h3;pre;div'
- }
+    {
+      uid: '-2',
+      name: 'yyy.png',
+      status: 'error'
+    }
+  ];
+
+  fileList1 = [...this.defaultFileList];
+  fileList2 = [...this.defaultFileList];
 }

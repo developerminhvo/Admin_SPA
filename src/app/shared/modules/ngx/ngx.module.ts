@@ -13,6 +13,7 @@ import { BarRatingModule } from 'ngx-bar-rating';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import * as echarts from 'echarts';
 import { ClickOutsideModule } from 'ng-click-outside';
+import {QuillModule} from 'ngx-quill';
 
 const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -30,6 +31,7 @@ export const NGX_MODULES = [
   ImageCropperModule,
   AngularEditorModule,
   BarRatingModule,  
+  QuillModule  
 ];
 @NgModule({
   exports: [...NGX_MODULES]
@@ -44,6 +46,7 @@ export class NgxModule {
           echarts
         }).providers,
         ...NgxEmojiPickerModule.forRoot().providers,
+        ...QuillModule.forRoot().providers
       ]
     };
   }
@@ -51,7 +54,7 @@ export class NgxModule {
     return {
       ngModule: NgxModule,
       providers: [
-
+        ...QuillModule.forRoot().providers
       ]
     };
   }

@@ -68,11 +68,15 @@
                         "styles": [
                             "src/styles.scss",
                             "src/assets/styles/ant.theme.less",
-                            "src/assets/styles/bootstrap.theme.scss",
+                            "src/assets/styles/bootstrap.theme.scss",                            
                             "src/assets/styles/fontawesome.theme.scss",
-                            "src/assets/styles/nebular.theme.scss"
+                            "src/assets/styles/nebular.theme.scss",
+                            "./node_modules/quill/dist/quill.core.css",
+                            "./node_modules/quill/dist/quill.snow.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "./node_modules/quill/dist/quill.min.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
