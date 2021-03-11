@@ -8,14 +8,15 @@
     <div class="col-md-6">
       <label for="">Tên Trường</label>
       <nb-form-field>        
-        <nb-icon nbPrefix icon="book-open-outline" pack="eva"></nb-icon>
+        <nb-icon nbPrefix icon="home-outline" pack="eva"></nb-icon>
         <input [formControl]="createUniversityForm.get('name')" type="text" placeholder="" fullWidth nbInput [status]="createUniversityForm.get('name').invalid && (createUniversityForm.get('name').touched || createUniversityForm.get('name').dirty) ? 'danger' : 'info'"/>
       </nb-form-field>
     </div>
     <div class="col-md-6">
       <label for="">Code</label>
       <nb-form-field>
-        <nb-icon nbPrefix icon="code-outline" pack="eva"></nb-icon>
+        <!-- <nb-icon nbPrefix icon="key-outline" pack="eva"></nb-icon> -->
+        <!-- <i nz-icon nzType="key" nzTheme="outline"></i> -->
         <input [formControl]="createUniversityForm.get('code')" type="text" placeholder="" fullWidth nbInput [status]="createUniversityForm.get('code').invalid && (createUniversityForm.get('code').touched || createUniversityForm.get('code').dirty) ? 'danger' : 'info'"/>        
       </nb-form-field>
     </div>            
@@ -24,7 +25,7 @@
     <div class="col-md-12">
       <label for="">Địa Chỉ</label>
       <nb-form-field>
-        <nb-icon nbPrefix icon="home-outline" pack="eva"></nb-icon>
+        <nb-icon nbPrefix icon="pin-outline" pack="eva"></nb-icon>
         <input [formControl]="createUniversityForm.get('address')" type="text" placeholder="" fullWidth nbInput/>        
       </nb-form-field>
     </div> 

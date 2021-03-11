@@ -131,7 +131,7 @@ const ANT_MODULES = [
   NzStatisticModule,
   NzStepsModule,
   NzSwitchModule,
-  
+  NzIconModule 
 ];
 
 @NgModule({
